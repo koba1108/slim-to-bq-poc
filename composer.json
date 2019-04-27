@@ -5,5 +5,9 @@
   "require-dev": {
     "google/cloud-tools": "^0.8.1",
     "phpunit/phpunit": "^5"
+  },
+  "scripts": {
+    "dev": "docker run -v `pwd`:/app -w /app -p 8000:8000 php:7.2-alpine php -S 0.0.0.0:8000",
+    "deploy": "gcloud app deploy --project=ykoba-dev"
   }
 }
